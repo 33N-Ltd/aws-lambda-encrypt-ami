@@ -11,6 +11,7 @@ resource "aws_lambda_function" "ami_encryption_lambda" {
 
   environment {
     variables = {
+      KMS_ENABLED = "True"
       KMS_KEY = "${var.kms_key_arn}"
     }
   }
