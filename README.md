@@ -4,7 +4,7 @@
 
 ---
 
-This Terraform module creates an encryption Lambda function that is triggered by a SNS notification on a successful AMI Packer build.
+This Terraform module creates an encryption Lambda function that is triggered by a SNS notification on a successful AMI Packer build. The module also creates a cloudwatch event that monitors build events and passes them to ami encryption lambda function. The cloudwatch even target is set to the ami encryption lambda, in order to run on any successful build.
 
 This project is part of our open source DevOps adoption approach. 
 
